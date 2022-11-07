@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Navbar } from '../Navbar/Navbar'
+import { Navbar } from './Components/Navbar/Navbar';
+import { Footer } from './Components/Footer/Footer'
 
 const Home = () => {
     const [toggle, setToggle] = useState(false);
@@ -8,7 +9,10 @@ const Home = () => {
     const handleOpen = () => setOpen(true);
 
     return (
+        <>
         <Navbar toggle={setToggle} openModal={handleOpen} />
+        <Footer />
+        </>
     );
 };
 
