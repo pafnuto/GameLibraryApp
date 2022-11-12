@@ -1,8 +1,3 @@
-type Rating = {
-    source: string;
-    value: string;
-  };
-  
   export type GameTypes = {
     genre_id: number;
     title: string;
@@ -21,9 +16,9 @@ type Rating = {
     poster: string;
     ratings: Rating[];
     metascore: string;
-    imdbRating: string;
-    imdbVotes: string;
-    imdbID: string;
+    metacriticRating: string;
+    metacriticVotes: string;
+    metacriticID: string;
     type: string;
     DVD: string;
     boxOffice: string;
@@ -36,5 +31,10 @@ type Rating = {
     text: string;
     className?: string;
     onClick?: () => void;
+  };
+
+  type Rating = {
+    source: string;
+    value: string;
   };
   

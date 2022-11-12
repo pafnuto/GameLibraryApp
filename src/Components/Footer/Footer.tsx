@@ -1,10 +1,11 @@
 import React from "react";
 import logo from '../../asset/logo.png';
+import './Footer.scss'
 
 export const Footer = () => {
   return (
-    <div className='Footer'>
-      <img src={logo} alt="logo image" />
+    <div className='footer'>
+      <img src={logo}/>
     </div>
   );
 };
