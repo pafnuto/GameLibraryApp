@@ -12,7 +12,6 @@
     plot: string;
     language: string;
     country: string;
-    awards: string;
     poster: string;
     ratings: Rating[];
     metascore: string;
@@ -20,8 +19,6 @@
     metacriticVotes: string;
     metacriticID: string;
     type: string;
-    DVD: string;
-    boxOffice: string;
     production: string;
     website: string;
     response: string;

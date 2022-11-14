@@ -1,4 +1,15 @@
 import React from 'react';
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+  Box,
+} from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { GameTypes } from "../../GameTypes";
 
 interface IGameProps {
@@ -18,7 +29,7 @@ const GameCard: React.FC<IGameProps> = ({
       language.slice(0, 3).toLocaleUpperCase();
   
     return (
-        <div className='gamecard' onClick={() => onClick(game.metacriticID)}>
+        <Card className='gamecard' onClick={() => onClick(game.metacriticID)}>
         <CardMedia
           component="img"
           alt="green iguana"
@@ -38,9 +49,9 @@ const GameCard: React.FC<IGameProps> = ({
           >
             <Typography variant="body2">{game.released}</Typography>
             <Typography sx={{ fontWeight: "bold" }}>
-              {formatMovieLanguage(game.language)}
+              {formatGameLanguage(game.language)}
             </Typography>
-            <Typography>{game.Rating}</Typography>
+            <Typography>{game.rated}</Typography>
             <Typography>{game.runtime}</Typography>
           </Box>
         </CardContent>
