@@ -6,7 +6,7 @@ interface INavProps {
     openModal: () => void;
   }
 
-export const Navbar: React.FC<INavProps> = ({ toggle, openModal})=> {
+const Navbar: React.FC<INavProps> = ({ toggle, openModal})=> {
     return (
       <>
         <BiSearchAlt
@@ -20,3 +20,4 @@ export const Navbar: React.FC<INavProps> = ({ toggle, openModal})=> {
     );
 };
 
+export default Navbar;

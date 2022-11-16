@@ -2,8 +2,6 @@
     genre_id: number;
     title: string;
     year: number;
-    rated: string;
-    released: string;
     genre: string;
     developer: string;
     publisher: string;
@@ -11,14 +9,9 @@
     country: string;
     poster: string;
     ratings: Rating[];
-    igdb: string;
+    igdbID: string;
     igdbRating: string;
     igdbVotes: string;
-    igdbID: string;
-    type: string;
-    production: string;
-    website: string;
-    response: string;
   };
   
   export type ButtonProps = {

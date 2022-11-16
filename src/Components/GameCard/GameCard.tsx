@@ -47,12 +47,12 @@ const GameCard: React.FC<IGameProps> = ({
               alignItems: "center",
             }}
           >
-            <Typography variant="body2">{game.released}</Typography>
+            <Typography variant="body2">{game.year}</Typography>
             <Typography sx={{ fontWeight: "bold" }}>
               {formatGameLanguage(game.language)}
             </Typography>
-            <Typography>{game.rated}</Typography>
-            <Typography>{game.released}</Typography>
+            <Typography>{game.igdbRating}</Typography>
+            <Typography>{game.year}</Typography>
           </Box>
         </CardContent>
         <CardActions>
