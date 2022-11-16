@@ -14,18 +14,18 @@ interface IGameListProps {
 const GameList: React.FC<IGameListProps> = ({games, onClick}) => {
     const [isEditOpen, setEditOpen] = useState(false);
     const [isDeleteOpen, setDeleteOpen] = useState(false);
-    const [game, setMovie] = useState({} as GameTypes);
+    const [game, setGame] = useState({} as GameTypes);
   
     const onEdit = (id: string) => {
-      const game = games.find((game) => game.metacriticID === id);
+      const game = games.find((game) => game.igdbID === id);
       if (game) {
         setEditOpen(true);
-        setMovie(game);
+        setGame(game);
       }
     };
   
     const onDelete = (id: string) => {
-      const game = games.find((game) => game.metacriticID === id);
+      const game = games.find((game) => game.igdbID === id);
       if (game) setDeleteOpen(true);
     };
   
@@ -41,7 +41,7 @@ const GameList: React.FC<IGameListProps> = ({games, onClick}) => {
                 onDelete={onDelete}
                 onEdit={onEdit}
                 onClick={onClick}
-                key={game.metacriticID}
+                key={game.igdbID}
                 game={game}
               />
             ))}

@@ -29,7 +29,7 @@ const GameCard: React.FC<IGameProps> = ({
       language.slice(0, 3).toLocaleUpperCase();
   
     return (
-        <Card className='gamecard' onClick={() => onClick(game.metacriticID)}>
+        <Card className='gamecard' onClick={() => onClick(game.igdbID)}>
         <CardMedia
           component="img"
           alt="green iguana"
@@ -52,14 +52,14 @@ const GameCard: React.FC<IGameProps> = ({
               {formatGameLanguage(game.language)}
             </Typography>
             <Typography>{game.rated}</Typography>
-            <Typography>{game.runtime}</Typography>
+            <Typography>{game.released}</Typography>
           </Box>
         </CardContent>
         <CardActions>
-          <Button onClick={() => onEdit(game.metacriticID)} size="small">
+          <Button onClick={() => onEdit(game.igdbID)} size="small">
             <EditIcon />
           </Button>
-          <Button size="small" onClick={() => onDelete(game.metacriticID)}>
+          <Button size="small" onClick={() => onDelete(game.igdbID)}>
             <DeleteIcon />
           </Button>
         </CardActions>
